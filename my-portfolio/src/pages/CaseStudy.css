@@ -1,0 +1,29 @@
+/* Ensure this file has your styles */
+.case-study-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* This ensures the footer stays at the bottom of the page */
+  }
+  
+  .case-study-content {
+    flex: 1; /* This makes sure the content takes up the available space between the navbar and footer */
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  footer {
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 1.2rem;
+  }
+  

@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@300;400;600&display=swap');
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 5rem 10%;
+    background: linear-gradient(to right, #ffffff, #ffffff); /* Soft gradient */
+}
+
+/* Text Content */
+.about-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+/* Intro text */
+.intro-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight:600;
+    font-style:italic;
+    font-stretch:extra-condensed;
+    color: #777;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards 0.3s;
+}
+
+/* Section Titles */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-top: 2rem;
+    color: #443627;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards 0.5s;
+}
+
+/* Body Text */
+.about-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: #7f6f5b;
+    font-weight: 400;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards 0.7s;
+}
+
+.image-container {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    border-radius: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeInScale 1s forwards 1s;
+    margin-left: 10rem;  
+    flex-direction: column;
+}
+
+/* Adjusted Hover Text */
+.hover-text {
+    position: absolute;
+    bottom: -2rem; /* Positioned closer below the image */
+    font-size: 1rem;
+    color: #000000;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, bottom 0.3s ease-in-out;
+}
+
+/* Show text when hovering over the image */
+.image-container:hover .hover-text {
+    opacity: 1;
+    bottom: -1.5rem; /* Slight upward movement on hover */
+}
+
+.profile-img {
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    transition: transform 0.3s ease-out;
+    border-radius: 50%;
+}
+
+/* Background Blur */
+.background-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(0px);
+    transition: filter 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* Hover Effects */
+.image-container:hover .profile-img {
+    transform: scale(1.05);
+}
+
+.image-container:hover .background-img {
+    filter: blur(12px);
+    transform: scale(1.07);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-container {
+        width: 280px;
+        height: 280px;
+        margin-left: 0; /* Remove shift on small screens */
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* Skills List */
+.skills-list {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: #7f6f5b;
+    font-weight: 400;
+    line-height: 1.8;
+    list-style: none;
+    padding-left: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards 0.9s;
+}
+
+/* List Item Styling */
+.skills-list li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+/* Background Blur */
+.background-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px); /* Adjusted the initial blur to make the effect noticeable */
+    transition: filter 0.3s ease-out, transform 0.3s ease-out;
+    z-index: 1; /* Added z-index to ensure it's behind the profile image */
+}
+
+/* Hover Effects */
+.image-container:hover .profile-img {
+    transform: scale(1.05);
+}
+
+.image-container:hover .background-img {
+    filter: blur(12px); /* Increase blur effect on hover */
+    transform: scale(1.07);
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .profile-naveen {
+    width: 350px; /* Adjust size as needed */
+    height:350px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black; /* Smaller black border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+    position: relative;
+    transform: translateY(-40px); /* Moves the circle upwards */
+  }
+  
+  .profile-naveen img {
+    width: 110%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the circle properly */
+  }
+  

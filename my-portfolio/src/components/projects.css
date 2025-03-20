@@ -1,0 +1,166 @@
+.projects {
+  padding: 4rem 2rem;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+.project-list {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.project-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.project-item:hover {
+  background: cyan;
+  color: black;
+}
+
+.preview-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 0 0;
+  pointer-events: none;
+}
+
+p {
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 100%;
+}
+
+#header p {
+  font-weight: 900;
+  font-size: 19px;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project {
+  width: 100%;
+  padding: 2.5em 1em;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.125);
+  cursor: pointer;
+}
+
+.project > div {
+  flex: 3;
+}
+
+.project div:last-child {
+  flex: 1;
+}
+
+@media (max-width: 900px) {
+  .info {
+    display: none;
+  }
+  
+}
+
+.project-heading {
+  color: black;
+  margin-top: 50px;
+  margin-left: 70px;
+  font-weight: 700;
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.preview-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.project-p0 {
+  font-weight: 900;
+}
+
+/* Ensure links don't have an underline or color change */
+.project a {
+  text-decoration: none !important; /* Remove underline */
+  color: inherit !important; /* Inherit the parent color */
+  background-color: transparent !important; /* Remove background color */
+}
+
+.project a:hover,
+.project a:focus {
+  color: inherit !important; /* Ensure no color change on hover/focus */
+  text-decoration: none !important; /* Remove underline */
+  background-color: transparent !important; /* Remove background color change */
+}
+
+.project .name,
+.project .info,
+.project .status {
+  color: #080808; /* Dark color for text */
+  font-weight: normal;
+  text-decoration: none; /* Ensure no bold text */
+}
+/* Add these styles to projects.css */
+.projects a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 2.5em 1em;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.125);
+  cursor: pointer;
+}
+
+/* Remove the padding and border from .project since they're now on the link */
+.project {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border-bottom: none;
+}
+@media (max-width: 768px) {
+  .project-heading {
+    margin-top: 250px; /* Increase margin for better spacing */
+    /* Adjust font size if necessary */
+  }
+}

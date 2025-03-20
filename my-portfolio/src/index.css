@@ -1,0 +1,25 @@
+/* index.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+  body {
+    font-family: 'Playfair Display', serif;
+  }
+  body.dark-mode {
+    background-color: #121212;
+    color: white;
+  }
+  
+  /* Navbar Dark Mode */
+  .navbar.dark {
+    background-color: black;
+    color: white;
+  }
+  

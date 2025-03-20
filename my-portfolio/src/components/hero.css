@@ -1,0 +1,205 @@
+/* Base Hero Section Styles */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  color: black;
+  padding: 10px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #443627 ;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  color: #938169;
+}
+
+.hero-animation {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  position: relative;
+  left: 0; /* Move the animation to the left */
+  top: -110px; /* Move animation higher */
+  margin-left: 0; /* Remove previous margin */
+  
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: #ffffff; /* Light background */
+  padding-bottom: 80px; /* Increased bottom padding to separate next section */
+}
+
+.hero-title {
+  font-size: 4rem; /* Large text to take up space */
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.8rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8; /* Increased spacing */
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.hero-title, .hero-subtitle {
+  opacity: 0; /* Initially hidden */
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Delay subtitle animation slightly */
+.hero-subtitle {
+  animation-delay: 0.3s;
+}
+
+/* Oval Effect */
+.oval-effect {
+  position: relative;
+  padding: 2px 10px;
+  border: 2px solid #706D54 ;
+  border-radius: 50px;
+  transition: all 0.4s ease-in-out;
+}
+
+.oval-effect:hover {
+  background: #706D54;
+  color: white;
+  transform: scale(1.05); /* Slightly enlarges */
+}
+
+/* Waving Hand Animation */
+.wave {
+  display: inline-block;
+  animation: wave-animation 1.5s infinite ease-in-out;
+}
+
+@keyframes wave-animation {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(15deg); }
+  50% { transform: rotate(0); }
+  75% { transform: rotate(15deg); }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.6rem;
+  }
+
+  .hero-animation {
+    width: 250px;
+    height: 250px;
+    margin-right: 110px; /* Align animation to the left */
+    top: 0px;
+  }
+}
+
+@media (max-width: 900px) {
+  /* Stack items vertically on smaller screens */
+  .hero {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+  }
+
+  .hero-container {
+    text-align: center;
+    margin-bottom: 0px; /* Space between text and animation */
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.4rem;
+    max-width: 90%;
+  }
+
+  .hero-animation {
+    width: 200px;
+    height: 200px;
+    left: 0;
+    top: -0px; /* Adjust to maintain positioning */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    max-width: 100%;
+  }
+
+  .hero-animation {
+    width: 180px;
+    height: 180px;
+    top: -50px;
+  }
+}
+
+/* Center the Download CV Button */
+.cta-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Adds space between the subtitle and the button */
+  width: 100%;
+}
+
+.cta-button {
+  padding: 10px 30px;
+  background-color: #6e6f6f; /* Green color */
+  color: white;
+  font-size: 1.2rem;
+  
+  text-decoration: none;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #474848; /* Darker green for hover effect */
+  box-shadow: 0 0 15px rgba(0, 170, 136, 0.5);
+}

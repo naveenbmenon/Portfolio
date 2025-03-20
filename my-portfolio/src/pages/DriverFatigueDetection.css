@@ -1,0 +1,268 @@
+/* Global Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #ffffff; /* Background updated */
+  color: #938169; /* Text color for paragraphs */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Apply fade-in animation to every section */
+.fatigue-intro,
+.problem-dataset-section,
+.problem-statement,
+.dataset-section,
+.algorithms-section,
+.project-demo-section {
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Fatigue Detection Main Container */
+.fatigue-detection {
+  width: 100%;
+  padding-top: 80px;
+  background: #ffffff; /* Background updated */
+}
+
+/* Hero Section */
+.fatigue-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 10%;
+  background: #ffffff; /* Background updated */
+  border-bottom: 1px solid #ddd;
+}
+
+.fatigue-intro .text-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.fatigue-intro h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #443627; /* Color updated for h1 headings */
+  text-transform: uppercase;
+}
+
+.fatigue-intro .tagline {
+  font-size: 1.4rem;
+  color: #827465; /* Color updated for taglines */
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.fatigue-intro .intro,
+.fatigue-intro .role {
+  font-size: 1rem;
+  color: #938169; /* Color updated for p text */
+  line-height: 1.6;
+}
+
+.fatigue-intro .animation {
+  width: 400px;
+}
+
+/* Problem Statement, Dataset, and Algorithm Sections */
+.problem-dataset-section {
+  padding: 100px 15%;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  max-width: 80%;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.problem-dataset-section:hover {
+  transform: translateY(-5px);
+}
+
+.problem-dataset-section h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #443627;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.problem-dataset-section h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #443627;
+  display: block;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.problem-dataset-section p {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #938169;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Highlight Important Text */
+.problem-dataset-section p strong {
+  color: #e74c3c;
+}
+
+.problem-dataset-section p em {
+  color: #555;
+  font-style: italic;
+}
+
+.problem-dataset-section code {
+  background: #f9f0e4;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: "Courier New", monospace;
+}
+
+/* Apply the same styles to multiple sections */
+.problem-statement,
+.dataset-section,
+.algorithms-section,
+.project-demo-section {
+  padding: 100px 15%;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  max-width: 80%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.problem-statement:hover,
+.dataset-section:hover,
+.algorithms-section:hover,
+.project-demo-section:hover {
+  transform: translateY(-5px);
+}
+
+/* Headings */
+.problem-statement h2,
+.dataset-section h2,
+.algorithms-section h2,
+.project-demo-section h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #443627;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.problem-statement h2::after,
+.dataset-section h2::after,
+.algorithms-section h2::after,
+.project-demo-section h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #ffffff;
+  display: block;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* Paragraphs */
+.problem-statement p,
+.dataset-section p,
+.algorithms-section p,
+.project-demo-section p {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #938169;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+/* Algorithms Section */
+.algorithms-section h3 {
+  font-size: 1.8rem;
+  color: #706D54;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.algorithms-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.algorithms-section li {
+  font-size: 1.2rem;
+  color: #666;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .fatigue-intro {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .fatigue-intro .animation {
+      width: 300px;
+      margin-top: 30px;
+  }
+
+  .problem-dataset-section, .problem-statement, .dataset-section, .algorithms-section, .project-demo-section {
+      padding: 80px 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .fatigue-intro {
+      padding: 50px 5%;
+  }
+
+  .problem-dataset-section {
+      padding: 50px 5%;
+  }
+
+  .project-demo-section {
+      padding: 50px 5%;
+  }
+}

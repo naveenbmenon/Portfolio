@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 95%;
+  background-color: white; /* Adjust as needed */
+  z-index: 1000; /* Ensures navbar stays on top */
+  padding: 1rem 2rem;
+  opacity: 0.9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for visibility */
+}
+
+
+.nav-left {
+  display: flex;
+  position: relative;
+}
+
+.nav-right {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: auto; /* Moves Work, About, and Let's Connect to the right */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif; /* Default font */
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Styling for "Naveen Menon" */
+.naveen-menon {
+  font-family: 'Montserrat', sans-serif; /* Match other nav links */
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.text-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Default state of "Naveen Menon" */
+.front-text-2 {
+  color: black;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  display: inline-block;
+  position: relative;
+}
+
+/* "Home" is initially hidden and positioned to the left */
+.back-text-2 {
+  color: red;
+  position: absolute;
+  left: -100%;
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* On hover, move "Naveen Menon" out and show "Home" on the left */
+.naveen-menon:hover .front-text-2 {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.naveen-menon:hover .back-text-2 {
+  transform: translateX(100%);
+  opacity: 1;
+}
+
+/* Hover animation for other nav links */
+.nav-link:hover .letter,
+.nav-link.play .letter {
+  transform: translateY(-100%);
+}
+
+.nav-link .letter {
+  display: inline-block;
+  transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+/* Staggered animation delays */
+.letter:nth-child(1) { transition-delay: 0s; }
+.letter:nth-child(2) { transition-delay: 0.25s; }
+.letter:nth-child(3) { transition-delay: 0.20s; }
+.letter:nth-child(4) { transition-delay: 0.12s; }
+.letter:nth-child(5) { transition-delay: 0.03s; }
+.letter:nth-child(6) { transition-delay: 0.05s; }
+.letter:nth-child(7) { transition-delay: 0.34s; }
+.letter:nth-child(8) { transition-delay: 0.15s; }
+.letter:nth-child(9) { transition-delay: 0.12s; }
+
+.front-text {
+  color: black;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.back-text {
+  color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+  display: inline-block;
+}
+
+
+.nav-link:hover .front-text {
+  transform: translateY(-100%);
+}
+
+.nav-link:hover .back-text {
+  transform: translateY(0%);
+}
