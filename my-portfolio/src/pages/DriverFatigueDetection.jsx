@@ -112,7 +112,7 @@ const DriverFatigueDetection = () => {
               The platform leverages AI-driven analytics to provide accurate fatigue assessment, reducing the risk of fatigue-related accidents.
             </p>
             <div className="project-links">
-              <a href="https://github.com/yourusername/driver-fatigue-detection" className="github-link" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/naveenbmenon/Driver-Fatigue-Detection" className="github-link" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-github"></i> View on GitHub
               </a>
             </div>

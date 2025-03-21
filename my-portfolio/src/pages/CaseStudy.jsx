@@ -7,7 +7,7 @@ const CaseStudy = () => {
     <div className="case-study-container">
       <main className="case-study-content">
         <h1>Case Study</h1>
-        <p>Welcome to the Driver Fatigue Detection page. This system uses EEG signals to detect fatigue levels of drivers.</p>
+        <p>WComing Soon</p>
       </main>
     </div>
   );

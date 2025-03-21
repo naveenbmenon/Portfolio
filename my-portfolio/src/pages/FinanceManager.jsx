@@ -134,7 +134,7 @@ const FinanceManager = () => {
               financial goal tracking, and investment performance analysis.
             </p>
             <div className="project-links">
-              <a href="https://github.com/yourusername/finance-manager" className="github-link" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/naveenbmenon/Finance-Manager" className="github-link" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-github"></i> View on GitHub
               </a>
               
