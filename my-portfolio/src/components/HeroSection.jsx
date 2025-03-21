@@ -19,7 +19,7 @@ const HeroSection = () => {
           
           {/* Download CV Button */}
           <div className="cta-button-container">
-            <a href="/images/naveenbijulalmenon_portfolio.pdf" download className="cta-button">
+            <a href="https://drive.google.com/file/d/1f85DDMKpvf-Hj9jBYqM8cZESJ455iy9O/view?usp=sharing" download className="cta-button">
               Download CV
             </a>
           </div>
